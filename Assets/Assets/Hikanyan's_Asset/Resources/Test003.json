@@ -1,0 +1,10 @@
+﻿{"name":"Tempestissimo","maxBlock":4,"BPM":120,"offset":1,
+"notes":[
+{"num":20,"type":1,"LPB":16,"block":3,"notes":[]},
+{"num":20,"type":1,"LPB":24,"block":2,"notes":[]},
+{"num":20,"type":1,"LPB":32,"block":1,"notes":[]},
+{"num":20,"type":1,"LPB":40,"block":0,"notes":[]},
+{"num":20,"type":1,"LPB":32,"block":1,"notes":[]},
+{"num":20,"type":1,"LPB":40,"block":2,"notes":[]},
+{"num":20,"type":1,"LPB":48,"block":3,"notes":[]}
+]}
