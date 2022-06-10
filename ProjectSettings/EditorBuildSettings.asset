@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/StartSeen.unity
+    guid: bf8b237f6233e0a498dbdfbe95f655f1
+  - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/GameScreen1.unity
+    guid: a316a17879852fa4b9f63c45610d8988
   m_configObjects: {}
