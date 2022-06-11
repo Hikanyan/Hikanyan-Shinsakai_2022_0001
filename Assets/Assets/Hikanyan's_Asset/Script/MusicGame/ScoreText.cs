@@ -11,6 +11,7 @@ public class ScoreText : MonoBehaviour
     public int _pure;
     public int _far;
     public int _lost;
+    public int _auto;
     private void Awake()
     {
         if (Instance == null)
@@ -25,7 +26,7 @@ public class ScoreText : MonoBehaviour
 
     private void Update()
     {
-        _text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}";
+        _text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
     }
 }
 /*

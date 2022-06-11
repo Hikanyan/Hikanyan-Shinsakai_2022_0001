@@ -8,10 +8,13 @@ public class Judge : MonoBehaviour
     [SerializeField] private GameObject[] _judgeObjects;//プレイヤーに判定を伝えるオブジェクト
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
-
+    private float _time = 0;
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D))//もし、Dキーが押されたとき
+        _time+=Time.deltaTime;
+
+
+        if (Input.GetKeyDown(KeyCode.D))//もし、Dキーが押されたとき
         {
             if(_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 0)
             /*
@@ -27,56 +30,36 @@ public class Judge : MonoBehaviour
                  * その絶対値をJudgment関数に送る
                  */
             }
+            Debug.Log($"Dキーが押された{_time}");
         }
         if (Input.GetKeyDown(KeyCode.F))//もし、Fキーが押されたとき
         {
-            /*
-             * _notesManager._notesTime.Countが0以上かつ
-             * _notesManager._laneNum[0](レーン1)が1のとき
-             * _notesManager._notesTime.Countはノーツが無くなったときに
-             * 判定を取らないようにするため
-             */
+            
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 1)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
-                /*
-                 * 本来のノーツを叩く場所と実際に叩いた場所がどれくらいズレているかを求める
-                 * その絶対値をJudgment関数に送る
-                 */
+                
             }
+            Debug.Log($"Fキーが押された{_time}");
         }
         if (Input.GetKeyDown(KeyCode.J))//もし、Jキーが押されたとき
         {
-            /*
-             * _notesManager._notesTime.Countが0以上かつ
-             * _notesManager._laneNum[0](レーン2)が2のとき
-             * _notesManager._notesTime.Countはノーツが無くなったときに
-             * 判定を取らないようにするため
-             */
+            
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 2)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
-                /*
-                 * 本来のノーツを叩く場所と実際に叩いた場所がどれくらいズレているかを求める
-                 * その絶対値をJudgment関数に送る
-                 */
+                
             }
+            Debug.Log($"Jキーが押された{_time}");
         }
         if (Input.GetKeyDown(KeyCode.K))//もし、Kキーが押されたとき
-        {/*
-             * _notesManager._notesTime.Countが0以上かつ
-             * _notesManager._laneNum[0](レーン3)が3のとき
-             * _notesManager._notesTime.Countはノーツが無くなったときに
-             * 判定を取らないようにするため
-             */
+        {
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 3)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
-                /*
-                 * 本来のノーツを叩く場所と実際に叩いた場所がどれくらいズレているかを求める
-                 * その絶対値をJudgment関数に送る
-                 */
+                
             }
+            Debug.Log($"Kキーが押された{_time}");
         }
         if (_notesManager._notesTime.Count > 0)//_notesManager.NotesTimeが1以上なら実行
         {
@@ -88,8 +71,24 @@ public class Judge : MonoBehaviour
                 NotesMessage(2);
                 DeleteData();
                 //ミス
+                Debug.Log($"みす{_time}");
             }
         }
+        /*
+        if (_notesManager._notesTime.Count > 0)//オート
+        {
+
+            if (Timer.instance.RealTime > _notesManager._notesTime[0])
+            {
+                Debug.Log("auto");
+                ScoreText.Instance._auto++;
+                NotesMessage(0);
+                DeleteData();
+                //ミス
+                Debug.Log($"オート");
+            }
+        }
+        */
     }
 
 

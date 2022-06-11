@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Hikanyan's_Asset/Screen/GameScreen1.unity
     guid: a316a17879852fa4b9f63c45610d8988
+  - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/GameModeSelect.unity
+    guid: 52e68f0727fe592498032e10e42f25b9
+  - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/MusicSelect.unity
+    guid: 708219f77aade1e4f9b594cbd6743093
   m_configObjects: {}

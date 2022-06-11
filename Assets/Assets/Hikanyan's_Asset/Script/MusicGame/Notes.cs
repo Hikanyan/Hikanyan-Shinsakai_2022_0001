@@ -16,12 +16,12 @@ public class Notes : MonoBehaviour
         transform.position -= new Vector3(0, 0, transform.forward.z * Time.deltaTime * _notesSpeed);
         if (this.transform.position.z < -5.0f)
         {
-            Debug.Log("false");
+            
             this.gameObject.SetActive(false);
         }
         if (this.transform.position.z < 18.0f)
         {
-            Debug.Log("true");
+            
             GetComponent<Renderer>().enabled = true;
         }
         
