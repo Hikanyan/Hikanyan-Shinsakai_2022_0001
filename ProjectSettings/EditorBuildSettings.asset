@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Hikanyan's_Asset/Screen/MusicSelect.unity
     guid: 708219f77aade1e4f9b594cbd6743093
+  - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/Result.unity
+    guid: 822fa21a49555ae40a278bc867161d54
   m_configObjects: {}

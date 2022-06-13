@@ -25,23 +25,33 @@ public class Note
     public int block;
     public int LPB;
 }
-
+/// <summary>
+/// Jsonファイルを読み取って
+/// ノーツを生成する
+/// </summary>
 
 
 public class NotesManager : MonoBehaviour
 {
-    public int _noteNum;//ノーツの総数
+    /// <summary>ノーツの総数 </summary>
+    public int _noteNum;
+    /// <summary>何番目のレーンにノーツが落ちてくるか </summary>
+    public List<int> _laneNum = new();
+    /// <summary>Notesの種類 </summary>
+    public List<int> _noteType = new();
+    /// <summary>ノーツが判定線と重なる時間 </summary>
+    public List<float> _notesTime = new();
+    /// <summary>ノーツのオブジェクト</summary>
+    public List<GameObject> _notesObject = new();
 
-    public List<int> _laneNum = new();//何番目のレーンにノーツが落ちてくるか
-    public List<int> _noteType = new();//Notesの種類
-    public List<float> _notesTime = new();//ノーツが判定線と重なる時間
-    public List<GameObject> _notesObject = new();//GameObject
 
-    
-   
+    /// <summary>曲名</summary>
     [SerializeField] private string _sonfName;//曲名を入れる関数を作成する。保存したJsonの名前を入れる
+    /// <summary>シングルノーツのオブジェクト</summary>
     [SerializeField] private GameObject _noteObject;//ノーツのプレハブを入れる
+    /// <summary>ロングノーツのオブジェクト</summary>
     [SerializeField] private GameObject _noteLongObject;//ロングノーツのプレハブを入れる
+    /// <summary>ノーツのスピード</summary>
     [SerializeField] private float _notesSeed;//ノーツのスピード
 
     private void Awake()//オブジェクトが有効にされたとき一回だけ呼び出される

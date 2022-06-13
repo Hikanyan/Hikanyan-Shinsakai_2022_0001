@@ -9,7 +9,7 @@ public class Judge : MonoBehaviour
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
     private float _time = 0;
-    private bool _autoMode = false;
+    private bool _autoMode = true;
     private void Update()
     {
         _time += Time.deltaTime;
@@ -86,7 +86,6 @@ public class Judge : MonoBehaviour
                 NotesMessage(0);
                 DeleteData();
                 Debug.Log($"オート{_time}");
-                Debug.Log($"オート");
             }
         }
 
