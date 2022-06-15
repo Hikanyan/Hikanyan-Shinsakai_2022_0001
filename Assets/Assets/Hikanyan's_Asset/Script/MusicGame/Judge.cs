@@ -9,7 +9,8 @@ public class Judge : MonoBehaviour
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
     private float _time = 0;
-    private bool _autoMode = true;
+
+    
     private void Update()
     {
         _time += Time.deltaTime;
@@ -76,7 +77,7 @@ public class Judge : MonoBehaviour
             }
         }
 
-        if (_autoMode == true && _notesManager._notesTime.Count > 0)//オート
+        if (AutoMode.Instance._autoMode == true && _notesManager._notesTime.Count > 0)//オート
         {
 
             if (Timer.instance.RealTime > _notesManager._notesTime[0])

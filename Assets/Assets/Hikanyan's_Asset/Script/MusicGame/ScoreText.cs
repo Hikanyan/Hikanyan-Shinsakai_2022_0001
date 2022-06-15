@@ -7,6 +7,7 @@ public class ScoreText : MonoBehaviour
 {
 
     [SerializeField] TextMeshPro _text;//プレイヤーに判定を伝えるテキスト
+    [SerializeField] TextMeshProUGUI _uiText;//プレイヤーに判定を伝えるテキスト
     public static ScoreText Instance;
     public int _pure;
     public int _far;
@@ -26,7 +27,19 @@ public class ScoreText : MonoBehaviour
 
     private void Update()
     {
-        _text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+
+        if(AutoMode.Instance._autoMode == true)
+        {
+            _text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+        }
+        else if(AutoMode.Instance._autoMode == false)
+        {
+            _text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+        }
+        
+        
     }
 }
 /*

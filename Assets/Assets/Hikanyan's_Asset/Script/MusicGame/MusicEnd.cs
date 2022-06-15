@@ -13,7 +13,6 @@ public class MusicEnd : MonoBehaviour
     {
         if (_notesManager._notesTime.Count == 0)
         {
-            MusicEndLoad();
             StartCoroutine(MusicEndLoad());
         }
     }
