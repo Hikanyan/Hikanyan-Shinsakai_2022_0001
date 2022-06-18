@@ -66,7 +66,7 @@ public class Judge : MonoBehaviour
         if (_notesManager._notesTime.Count > 0)//_notesManager.NotesTimeが1以上なら実行
         {
 
-            if (Timer.instance.RealTime > _notesManager._notesTime[0] + 0.2f)//もし、本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+            if (Timer.instance.RealTime > _notesManager._notesTime[0] + 0.30f)//もし、本来ノーツをたたくべき時間から0.30秒たっても入力がなかった場合
             {
                 Debug.Log("LOST");
                 ScoreText.Instance._lost++;
@@ -99,14 +99,14 @@ public class Judge : MonoBehaviour
 
     void Judgment(float timeLag)//後から判定を増やすのもあり
     {
-        if (timeLag < 0.10)//もし、本来のノーツを叩くべき時間と実際にノーツを叩いた時間の誤差が0.1秒以下だったら
+        if (timeLag < 0.10f)//もし、本来のノーツを叩くべき時間と実際にノーツを叩いた時間の誤差が0.10秒以下だったら
         {
             Debug.Log("PURE");
             ScoreText.Instance._pure++;
             NotesMessage(0);
             DeleteData();
         }
-        else if (timeLag < 0.15)//もし、本来のノーツを叩くべき時間と実際にノーツを叩いた時間の誤差が0.15秒以下だったら
+        else if (timeLag < 0.30f)//もし、本来のノーツを叩くべき時間と実際にノーツを叩いた時間の誤差が0.20秒以下だったら
         {
             Debug.Log("FAR");
             ScoreText.Instance._far++;
