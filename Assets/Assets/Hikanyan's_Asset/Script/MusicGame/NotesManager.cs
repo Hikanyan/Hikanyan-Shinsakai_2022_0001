@@ -53,17 +53,23 @@ public class NotesManager : MonoBehaviour
     [SerializeField] private GameObject _noteLongObject;//ロングノーツのプレハブを入れる
     /// <summary>ノーツのスピード</summary>
     [SerializeField] private float _notesSeed;//ノーツのスピード
+    /// <summary>ノーツが流れてくる猶予 </summary>
+    [SerializeField] public float _notesOffset;//ノーツが流れてくる遅延時間
 
     private void Awake()//オブジェクトが有効にされたとき一回だけ呼び出される
     {
         _noteNum = 0;//ノーツを0に初期化
-        NotesLoad(_sonfName);//NotesLoad(_sonfName)を呼び出し
+        StartCoroutine("Delay");//_notesOffset秒後にNotesLoad(_sonfName)を呼び出し
     }
 
     //有効にされたらJsonファイルを読み込み、座標を計算して配置する
     //Updateを使わない理由はPlay中にズレないようにするため
 
-
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(_notesOffset);
+        NotesLoad(_sonfName);
+    }
 
 
     private void NotesLoad(string SongName)//ノーツ

@@ -8,10 +8,11 @@ public class MusicEnd : MonoBehaviour
 
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] private string _sceneName;        //どのシーンに移したいか
-
+    private float _time = 0;
     void Update()
     {
-        if (_notesManager._notesTime.Count == 0)
+        _time += Time.deltaTime;
+        if (_time>15&&_notesManager._notesTime.Count == 0)
         {
             StartCoroutine(MusicEndLoad());
         }

@@ -383,6 +383,7 @@ MonoBehaviour:
   - {fileID: 1035788586572938245, guid: d9c716eabe7ed1e4c9b0d9bb928caa23, type: 3}
   _notesManager: {fileID: 418391788}
   _timer: {fileID: 2009778534}
+  _notesOffset: 0
 --- !u!1 &409995283
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +596,7 @@ MonoBehaviour:
   _noteObject: {fileID: 675651418}
   _noteLongObject: {fileID: 0}
   _notesSeed: 30
+  _notesOffset: 0
 --- !u!4 &418391789
 Transform:
   m_ObjectHideFlags: 0
@@ -2384,7 +2386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1851213686}
-  _audioOffset: 0.8
+  _audioOffset: 0
 --- !u!1 &1883995445
 GameObject:
   m_ObjectHideFlags: 0

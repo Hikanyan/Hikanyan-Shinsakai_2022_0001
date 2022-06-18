@@ -9,7 +9,7 @@ public class Judge : MonoBehaviour
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
     private float _time = 0;
-
+    [HideInInspector] public float _notesOffset;
     
     private void Update()
     {
