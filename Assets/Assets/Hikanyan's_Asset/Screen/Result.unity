@@ -466,12 +466,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7719292580612721051, guid: 88c19ff7d145cae46bf45113c30bbe41, type: 3}
+      propertyPath: m_text
+      value: 'PURE 1000
+
+        PURE 1000
+
+        PURE 1000
+
+        PURE 1000'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719292580612721051, guid: 88c19ff7d145cae46bf45113c30bbe41, type: 3}
       propertyPath: m_fontSize
-      value: 140
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 7719292580612721051, guid: 88c19ff7d145cae46bf45113c30bbe41, type: 3}
       propertyPath: m_fontSizeBase
-      value: 140
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 7719292581956228336, guid: 88c19ff7d145cae46bf45113c30bbe41, type: 3}
       propertyPath: m_Pivot.x

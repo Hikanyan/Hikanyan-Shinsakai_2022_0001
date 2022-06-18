@@ -8,6 +8,7 @@ public class MusicEnd : MonoBehaviour
 
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] private string _sceneName;        //どのシーンに移したいか
+    public bool _result;
     private float _time = 0;
     void Update()
     {
