@@ -54,7 +54,7 @@ public class NotesManager : MonoBehaviour
     /// <summary>ノーツのスピード</summary>
     [SerializeField] private float _notesSeed;//ノーツのスピード
     /// <summary>ノーツが流れてくる猶予 </summary>
-    [SerializeField] public float _notesOffset;//ノーツが流れてくる遅延時間
+    [SerializeField] public float _notesOffset;//ノーツが流れてくる遅延時間(未実装)
 
     private void Awake()//オブジェクトが有効にされたとき一回だけ呼び出される
     {

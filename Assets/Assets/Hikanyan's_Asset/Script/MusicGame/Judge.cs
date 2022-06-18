@@ -9,7 +9,7 @@ public class Judge : MonoBehaviour
     [SerializeField] NotesManager _notesManager;       //スクリプト「_notesManager」を入れる変数
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
     private float _time = 0;
-    [HideInInspector] public float _notesOffset;
+    [HideInInspector] public float _notesOffset;        //動かしたら壊れる
     
     private void Update()
     {
@@ -26,7 +26,7 @@ public class Judge : MonoBehaviour
              * 判定を取らないようにするため
              */
             {
-                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
+                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0] ));
                 /*
                  * 本来のノーツを叩く場所と実際に叩いた場所がどれくらいズレているかを求める
                  * その絶対値をJudgment関数に送る
