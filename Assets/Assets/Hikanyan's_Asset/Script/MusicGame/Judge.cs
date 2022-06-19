@@ -86,9 +86,9 @@ public class Judge : MonoBehaviour
 
         if (AutoMode.Instance._autoMode == true && _notesManager._notesTime.Count > 0)//ƒI[ƒg
         {
-            _audioSource.PlayOneShot(_clip);
             if (Timer.instance.RealTime > _notesManager._notesTime[0])
             {
+                _audioSource.PlayOneShot(_clip);
                 Debug.Log("auto");
                 ScoreText.Instance._auto++;
                 NotesMessage(0);
