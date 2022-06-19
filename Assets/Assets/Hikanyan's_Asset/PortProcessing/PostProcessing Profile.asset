@@ -1,106 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Recommended Profile
-  m_EditorClassIdentifier: 
-  settings:
-  - {fileID: 114357776453000568}
-  - {fileID: 114458790615753430}
-  - {fileID: 114254744475804696}
---- !u!114 &114254744475804696
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 14.6
-  threshold:
-    overrideState: 1
-    value: 0.9
-  softKnee:
-    overrideState: 0
-    value: 0
-  clamp:
-    overrideState: 0
-    value: 100
-  diffusion:
-    overrideState: 0
-    value: 10
-  anamorphicRatio:
-    overrideState: 0
-    value: 0
-  color:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
-  fastMode:
-    overrideState: 0
-    value: 0
-  dirtTexture:
-    overrideState: 0
-    value: {fileID: 0}
-    defaultState: 1
-  dirtIntensity:
-    overrideState: 0
-    value: 0
---- !u!114 &114357776453000568
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
-  m_Name: AutoExposure
-  m_EditorClassIdentifier: 
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  filtering:
-    overrideState: 1
-    value: {x: 50, y: 95}
-  minLuminance:
-    overrideState: 1
-    value: -1.9
-  maxLuminance:
-    overrideState: 1
-    value: -1.41
-  keyValue:
-    overrideState: 1
-    value: 0.22
-  eyeAdaptation:
-    overrideState: 1
-    value: 0
-  speedUp:
-    overrideState: 1
-    value: 2
-  speedDown:
-    overrideState: 1
-    value: 1
---- !u!114 &114458790615753430
+--- !u!114 &-7009834290163832453
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,99 +20,99 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   externalLut:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
     overrideState: 1
     value: 1
   toneCurveToeStrength:
-    overrideState: 1
+    overrideState: 0
     value: 0
   toneCurveToeLength:
-    overrideState: 1
+    overrideState: 0
     value: 0.5
   toneCurveShoulderStrength:
-    overrideState: 1
+    overrideState: 0
     value: 0
   toneCurveShoulderLength:
-    overrideState: 1
+    overrideState: 0
     value: 0.5
   toneCurveShoulderAngle:
-    overrideState: 1
+    overrideState: 0
     value: 0
   toneCurveGamma:
-    overrideState: 1
+    overrideState: 0
     value: 1
   ldrLut:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 4
   ldrLutContribution:
-    overrideState: 1
+    overrideState: 0
     value: 1
   temperature:
-    overrideState: 1
-    value: 57.4
+    overrideState: 0
+    value: 0
   tint:
-    overrideState: 1
-    value: 12.6
+    overrideState: 0
+    value: 0
   colorFilter:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
-    overrideState: 1
-    value: 4.3
+    overrideState: 0
+    value: 0
   saturation:
-    overrideState: 1
-    value: -25.7
+    overrideState: 0
+    value: 0
   brightness:
-    overrideState: 1
+    overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.5
+    value: 1.08
   contrast:
-    overrideState: 1
-    value: 31.7
+    overrideState: 0
+    value: 0
   mixerRedOutRedIn:
-    overrideState: 1
-    value: 200
+    overrideState: 0
+    value: 100
   mixerRedOutGreenIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerRedOutBlueIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerGreenOutRedIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerGreenOutGreenIn:
-    overrideState: 1
-    value: 200
+    overrideState: 0
+    value: 100
   mixerGreenOutBlueIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerBlueOutRedIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerBlueOutGreenIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerBlueOutBlueIn:
-    overrideState: 1
-    value: 200
+    overrideState: 0
+    value: 100
   lift:
-    overrideState: 1
+    overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
-    overrideState: 1
+    overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
   gain:
-    overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: -0.49128363}
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0}
   masterCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
@@ -224,8 +124,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
@@ -233,8 +133,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -371,7 +271,7 @@ MonoBehaviour:
       - 0.984375
       - 0.9921875
   redCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
@@ -383,8 +283,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
@@ -392,8 +292,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -530,7 +430,7 @@ MonoBehaviour:
       - 0.984375
       - 0.9921875
   greenCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
@@ -542,8 +442,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
@@ -551,8 +451,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -689,7 +589,7 @@ MonoBehaviour:
       - 0.984375
       - 0.9921875
   blueCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
@@ -701,8 +601,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
@@ -710,8 +610,8 @@ MonoBehaviour:
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -848,14 +748,14 @@ MonoBehaviour:
       - 0.984375
       - 0.9921875
   hueVsHueCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 0
+        m_RotationOrder: 4
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -989,7 +889,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
   hueVsSatCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
@@ -1130,14 +1030,14 @@ MonoBehaviour:
       - 0.5
       - 0.5
   satVsSatCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 0
+        m_RotationOrder: 4
       m_Loop: 0
       m_ZeroValue: 0.5
       m_Range: 1
@@ -1271,14 +1171,14 @@ MonoBehaviour:
       - 0.5
       - 0.5
   lumVsSatCurve:
-    overrideState: 1
+    overrideState: 0
     value:
       curve:
         serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 0
+        m_RotationOrder: 4
       m_Loop: 0
       m_ZeroValue: 0.5
       m_Range: 1
@@ -1411,3 +1311,65 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: PostProcessing Profile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 5781533326301982972}
+  - {fileID: -7009834290163832453}
+--- !u!114 &5781533326301982972
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 3.89
+  threshold:
+    overrideState: 0
+    value: 1
+  softKnee:
+    overrideState: 0
+    value: 0.5
+  clamp:
+    overrideState: 0
+    value: 65472
+  diffusion:
+    overrideState: 0
+    value: 7
+  anamorphicRatio:
+    overrideState: 0
+    value: 0
+  color:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
