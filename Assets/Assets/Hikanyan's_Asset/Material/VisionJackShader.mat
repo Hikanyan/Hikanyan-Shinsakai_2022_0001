@@ -158,7 +158,7 @@ Material:
     - _RandLine: 1
     - _RedX: 0.01
     - _RedY: -0.01
-    - _ReflectionValue: 0.5
+    - _ReflectionValue: 1
     - _RightStripesAmount: 5
     - _RightStripesFill: 0.7
     - _SP: 1
