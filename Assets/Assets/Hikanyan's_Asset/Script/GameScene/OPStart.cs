@@ -9,17 +9,19 @@ public class OPStart : MonoBehaviour
     [SerializeField] GameObject _startMenu;
     private void Start()
     {
-        _op.gameObject.SetActive(true);
-        _startMenu.gameObject.SetActive(false);
+        _op.SetActive(true);
+        _startMenu.SetActive(false);
     }
 
     private void Update()
     {
-        StartCoroutine("OpEnd");
+
+        StartCoroutine(nameof(OpEnd));
+
     }
     IEnumerator OpEnd()
     {
         yield return new WaitForSeconds(40);
-        _startMenu.gameObject.SetActive(true);
+        _startMenu.SetActive(true);
     }
 }

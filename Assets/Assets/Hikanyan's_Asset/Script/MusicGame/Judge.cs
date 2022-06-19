@@ -10,7 +10,13 @@ public class Judge : MonoBehaviour
     [SerializeField] Timer _timer;                     //スクリプト「_timer」を入れる関数
     private float _time = 0;
     [HideInInspector] public float _notesOffset;        //動かしたら壊れる
-    
+    [SerializeField] AudioClip _clip;                   //効果音入れる
+    AudioSource _audioSource;                           
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();      //オーディオソースのコンポーネントを取得
+    }
+
     private void Update()
     {
         _time += Time.deltaTime;
@@ -18,6 +24,7 @@ public class Judge : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))//もし、Dキーが押されたとき
         {
+            _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 0)
             /*
              * _notesManager._notesTime.Countが0以上かつ
@@ -36,7 +43,7 @@ public class Judge : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))//もし、Fキーが押されたとき
         {
-
+            _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 1)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
@@ -46,7 +53,7 @@ public class Judge : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.J))//もし、Jキーが押されたとき
         {
-
+            _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 2)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
@@ -56,6 +63,7 @@ public class Judge : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.K))//もし、Kキーが押されたとき
         {
+            _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 3)
             {
                 Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
@@ -65,7 +73,6 @@ public class Judge : MonoBehaviour
         }
         if (_notesManager._notesTime.Count > 0)//_notesManager.NotesTimeが1以上なら実行
         {
-
             if (Timer.instance.RealTime > _notesManager._notesTime[0] + 0.30f)//もし、本来ノーツをたたくべき時間から0.30秒たっても入力がなかった場合
             {
                 Debug.Log("LOST");
@@ -79,7 +86,7 @@ public class Judge : MonoBehaviour
 
         if (AutoMode.Instance._autoMode == true && _notesManager._notesTime.Count > 0)//オート
         {
-
+            _audioSource.PlayOneShot(_clip);
             if (Timer.instance.RealTime > _notesManager._notesTime[0])
             {
                 Debug.Log("auto");
