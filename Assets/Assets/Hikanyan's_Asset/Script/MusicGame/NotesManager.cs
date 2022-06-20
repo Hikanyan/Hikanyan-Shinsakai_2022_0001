@@ -46,7 +46,7 @@ public class NotesManager : MonoBehaviour
 
 
     /// <summary>曲名</summary>
-    [SerializeField] private string _sonfName;//曲名を入れる関数を作成する。保存したJsonの名前を入れる
+    public string _jsonMusicName;//曲名を入れる関数を作成する。保存したJsonの名前を入れる
     /// <summary>シングルノーツのオブジェクト</summary>
     [SerializeField] private GameObject _noteObject;//ノーツのプレハブを入れる
     /// <summary>ロングノーツのオブジェクト</summary>
@@ -59,7 +59,7 @@ public class NotesManager : MonoBehaviour
     private void Awake()//オブジェクトが有効にされたとき一回だけ呼び出される
     {
         _noteNum = 0;//ノーツを0に初期化
-        StartCoroutine(nameof(Delay));//_notesOffset秒後にNotesLoad(_sonfName)を呼び出し
+        StartCoroutine(nameof(Delay));//_notesOffset秒後にNotesLoad(_jsonMusicName)を呼び出し
     }
 
     //有効にされたらJsonファイルを読み込み、座標を計算して配置する
@@ -68,7 +68,7 @@ public class NotesManager : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(_notesOffset);
-        NotesLoad(_sonfName);
+        NotesLoad(_jsonMusicName);
     }
 
 

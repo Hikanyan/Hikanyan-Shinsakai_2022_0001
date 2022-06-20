@@ -690,7 +690,7 @@ MonoBehaviour:
   _noteType: 
   _notesTime: []
   _notesObject: []
-  _sonfName: "Ucchii0 - Be Happy\u3010Free Ver\u3011"
+  _jsonMusicName: "Ucchii0 - Be Happy\u3010Free Ver\u3011"
   _noteObject: {fileID: 675651418}
   _noteLongObject: {fileID: 0}
   _notesSeed: 30
@@ -868,6 +868,10 @@ PrefabInstance:
     - target: {fileID: 666444962360498789, guid: 1a750e73bb4d8774fbbfb9d5a8fbccca, type: 3}
       propertyPath: m_Name
       value: LoadingScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 666444962360498789, guid: 1a750e73bb4d8774fbbfb9d5a8fbccca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 666444962360498791, guid: 1a750e73bb4d8774fbbfb9d5a8fbccca, type: 3}
       propertyPath: m_RootOrder
