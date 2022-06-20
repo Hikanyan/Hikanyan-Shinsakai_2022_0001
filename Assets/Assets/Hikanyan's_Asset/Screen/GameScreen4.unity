@@ -690,7 +690,7 @@ MonoBehaviour:
   _noteType: 
   _notesTime: []
   _notesObject: []
-  _jsonMusicName: 514
+  _jsonMusicName: "\u4E0D\u8001\u4E0D\u6B7B"
   _noteObject: {fileID: 675651418}
   _noteLongObject: {fileID: 0}
   _notesSeed: 30
@@ -2444,7 +2444,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e6987b01d1293fa46bd0984b9066d92b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef903c26e8dc96742aecce335f1ac92a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
