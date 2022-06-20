@@ -690,7 +690,7 @@ MonoBehaviour:
   _noteType: 
   _notesTime: []
   _notesObject: []
-  _jsonMusicName: "Ucchii0 - Be Happy\u3010Free Ver\u3011"
+  _jsonMusicName: "\u8FFD\u3044\u304B\u3051\u3063\u3053\u30AD\u30E3\u30C3\u30CF\u30FC"
   _noteObject: {fileID: 675651418}
   _noteLongObject: {fileID: 0}
   _notesSeed: 30
@@ -2444,7 +2444,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2fc27cc567331974caf1589fdd9dbdd1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 23b39cf923451854aa73903583e40848, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1851213686}
-  _audioOffset: 3
+  _audioOffset: 5
 --- !u!1 &1883995445
 GameObject:
   m_ObjectHideFlags: 0
