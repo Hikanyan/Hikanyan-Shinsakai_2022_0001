@@ -10,6 +10,11 @@ public class MusicEnd : MonoBehaviour
     [SerializeField] private string _sceneName;        //どのシーンに移したいか
     private float _time = 0;
     [HideInInspector] public bool _musicEnd = false;   //曲が終わったかどうか
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
     void Update()
     {
         _time += Time.deltaTime;
@@ -22,10 +27,9 @@ public class MusicEnd : MonoBehaviour
 
     IEnumerator MusicEndLoad()
     {
-        _musicEnd = true;
+        ScoreText.Instance._musicEnd = true;
         yield return new WaitForSeconds(3);
-        Debug.Log($"UIが押されたに{_sceneName}移行");
-        //SceneManager.LoadScene("GameScreen1");
+        Debug.Log($"{_sceneName}移行");
         LoadingScene.Instance.LoadNextScene(_sceneName);
     }
 }

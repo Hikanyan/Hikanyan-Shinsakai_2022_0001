@@ -29,6 +29,11 @@ public class ScoreText : MonoBehaviour
 
     private void Update()
     {
+        JudgeTextMessage();
+    }
+
+    private void JudgeTextMessage()
+    {
         if (_musicEnd == false && AutoMode.Instance._autoMode == true)
         {
             //_text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
