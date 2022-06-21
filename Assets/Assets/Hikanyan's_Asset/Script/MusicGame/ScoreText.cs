@@ -69,30 +69,40 @@ public class ScoreText : MonoBehaviour
             _resultRankUiText.text = "PM";
             _resultRankJudgeText = "PM";
         }
-        else if (_maxScore >= 9000000)
+        else if (_maxScore >= 9900000)
         {
             _resultRankUiText.text = "EX";
             _resultRankJudgeText = "EX";
         }
-        else if (_maxScore >= 8000000)
+        else if (_maxScore >= 9800000)
         {
             _resultRankUiText.text = "AA";
             _resultRankJudgeText = "AA";
         }
-        else if (_maxScore >= 7000000)
+        else if (_maxScore >= 9500000)
         {
             _resultRankUiText.text = "A";
             _resultRankJudgeText = "A";
         }
-        else if (_maxScore >= 6000000)
+        else if (_maxScore >= 9200000)
         {
             _resultRankUiText.text = "B";
             _resultRankJudgeText = "B";
         }
-        else if (_maxScore >= 5000000)
+        else if (_maxScore >= 8900000)
         {
             _resultRankUiText.text = "C";
             _resultRankJudgeText = "C";
+        }
+        else if (_maxScore >= 8600000)
+        {
+            _resultRankUiText.text = "C";
+            _resultRankJudgeText = "C";
+        }
+        else
+        {
+            _resultRankUiText.text = "D";
+            _resultRankJudgeText = "D";
         }
     }
 }
