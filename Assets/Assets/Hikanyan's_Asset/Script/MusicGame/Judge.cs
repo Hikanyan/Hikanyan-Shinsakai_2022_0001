@@ -75,7 +75,7 @@ public class Judge : MonoBehaviour
         {
             if (Timer.instance.RealTime > _notesManager._notesTime[0] + 0.30f)//もし、本来ノーツをたたくべき時間から0.30秒たっても入力がなかった場合
             {
-                Debug.Log("LOST");
+                ScoreText.Instance._maxScore -= ScoreText.Instance._singleScore;
                 ScoreText.Instance._lost++;
                 NotesMessage(2);
                 DeleteData();
@@ -116,6 +116,7 @@ public class Judge : MonoBehaviour
         else if (timeLag < 0.30f)//もし、本来のノーツを叩くべき時間と実際にノーツを叩いた時間の誤差が0.20秒以下だったら
         {
             Debug.Log("FAR");
+            ScoreText.Instance._maxScore -= ScoreText.Instance._singleScore/2;
             ScoreText.Instance._far++;
             NotesMessage(1);
             DeleteData();
@@ -125,7 +126,7 @@ public class Judge : MonoBehaviour
 
     //float GetABS(float num)//因数の絶対値を返す関数
     //                       //ABSは絶対値 (absolute value) を返す関数という意味
-    //                       //Mathf.Abs(num);というもので一行でできるらしい
+    //                       //Mathf.Abs(num);というもので一行でできるらしい→できた
     //{
     //    if (num >= 0)//もし、numが0より大きかったらnumを返す（0以上）
     //    {

@@ -80,6 +80,8 @@ public class NotesManager : MonoBehaviour
 
         _noteNum = inputJson.notes.Length;//ノーツ数の合計
 
+        ScoreText.Instance._maxScore += _noteNum;//スコアテキストにノーツの総数を与える
+        ScoreText.Instance._singleScore = ScoreText.Instance._maxScore/_noteNum;//一個ごとのスコア
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

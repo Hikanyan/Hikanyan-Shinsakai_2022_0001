@@ -7,14 +7,22 @@ public class ScoreText : MonoBehaviour
 {
 
     //[SerializeField] TextMeshPro _text;//プレイヤーに判定を伝えるテキスト(用済み)
-    [SerializeField] TextMeshProUGUI _uiText;//プレイヤーに判定を伝えるテキスト
+    [SerializeField] TextMeshProUGUI _judgeUiText;//プレイヤーに判定を伝えるテキスト
+    [SerializeField] TextMeshProUGUI _resultRankUiText;
+    [SerializeField] TextMeshProUGUI _resultScoreUiText;
+
     public static ScoreText Instance;//オートモードを持ってくるためのシングルトン
+    public int _noteNum;
     public int _pure;
     public int _far;
     public int _lost;
     public int _auto;
     public bool _musicEnd;
-    public string _resultText;
+    public string _resultJudgeText;
+    public string _resultRankJudgeText;
+    public int _maxScore = 10000000;
+    public int _singleScore;
+    public string _resultScoreJudgeText;
     private void Awake()
     {
         if (Instance == null)
@@ -37,17 +45,60 @@ public class ScoreText : MonoBehaviour
     {
         if (_musicEnd == false && AutoMode.Instance._autoMode == true)
         {
-            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
-            _resultText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
-
+            _judgeUiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+            _resultJudgeText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+            _resultRankUiText.text = "Auto";
+            _resultRankJudgeText = "Auto";
         }
         if (_musicEnd == false && AutoMode.Instance._autoMode == false)
         {
-            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
-            _resultText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+            _judgeUiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+            _resultJudgeText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+            ResultScore();
+        }
+    }
+
+    public void ResultScore()
+    {
+
+        _maxScore -= ((_far*10 / 2) + _lost*10);
+        _resultScoreUiText.text = $"{_maxScore}";
+        _resultScoreJudgeText = $"{_maxScore}";
+        if (_maxScore == 10000000)
+        {
+            _resultRankUiText.text = "PM";
+            _resultRankJudgeText = "PM";
+        }
+        else if (_maxScore >= 9000000)
+        {
+            _resultRankUiText.text = "EX";
+            _resultRankJudgeText = "EX";
+        }
+        else if (_maxScore >= 8000000)
+        {
+            _resultRankUiText.text = "AA";
+            _resultRankJudgeText = "AA";
+        }
+        else if (_maxScore >= 7000000)
+        {
+            _resultRankUiText.text = "A";
+            _resultRankJudgeText = "A";
+        }
+        else if (_maxScore >= 6000000)
+        {
+            _resultRankUiText.text = "B";
+            _resultRankJudgeText = "B";
+        }
+        else if (_maxScore >= 5000000)
+        {
+            _resultRankUiText.text = "C";
+            _resultRankJudgeText = "C";
         }
     }
 }
+
+
 /*
- * 簡易版シングルトン癖になる
+ * 理想           500                 500                     20001
+ * （10000000+全体のノーツの総数）/全体のノーツの総数　＝　一個当たりのスコアの点数
  */

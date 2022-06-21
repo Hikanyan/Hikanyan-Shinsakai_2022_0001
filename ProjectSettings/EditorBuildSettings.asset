@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Assets/Hikanyan's_Asset/Screen/GameScreen4.unity
     guid: 9ec6084c676f5a24299dfa7ce7c51eda
   - enabled: 1
+    path: Assets/Assets/Hikanyan's_Asset/Screen/GameScreen5.unity
+    guid: fad36ebc342ac3b49b583581c54b740e
+  - enabled: 1
     path: Assets/Assets/Hikanyan's_Asset/Screen/GameModeSelect.unity
     guid: 52e68f0727fe592498032e10e42f25b9
   - enabled: 1

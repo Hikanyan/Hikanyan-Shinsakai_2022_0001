@@ -5,9 +5,13 @@ using TMPro;
 
 public class ResultScore : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _testText;
+    [SerializeField] private TextMeshProUGUI _judgeText;
+    [SerializeField] private TextMeshProUGUI _rankText;
+    [SerializeField] private TextMeshProUGUI _scoreText;
     void Start()
     {
-        _testText.text = ScoreText.Instance._resultText;
+        _judgeText.text = ScoreText.Instance._resultJudgeText;
+        _rankText.text = ScoreText.Instance._resultRankJudgeText;
+        _scoreText.text = ScoreText.Instance._resultScoreJudgeText;
     }
 }

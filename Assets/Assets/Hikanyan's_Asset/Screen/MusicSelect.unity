@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd95a40e7530ff49bb7d963c16ced2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: GameScreen3
+  _sceneName: GameScreen5
 --- !u!114 &784115920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,9 +704,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level3
+  m_text: 'Level5
 
-    Nyan(Easy)'
+    SUMMER_TRIANGLE
+
+    (Short30Second)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -733,8 +735,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 98.7
-  m_fontSizeBase: 98.7
+  m_fontSize: 87.6
+  m_fontSizeBase: 87.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1745,7 +1747,9 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Level9
 
-        514'
+        514
+
+        (Long)'
       objectReference: {fileID: 0}
     - target: {fileID: 7730163194448280352, guid: ad9bda5172990364b836cb56300d362a, type: 3}
       propertyPath: m_fontSize
