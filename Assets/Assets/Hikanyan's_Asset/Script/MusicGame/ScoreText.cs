@@ -37,13 +37,13 @@ public class ScoreText : MonoBehaviour
     {
         if (_musicEnd == false && AutoMode.Instance._autoMode == true)
         {
-            //_text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
+            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
             _resultText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\nAUTO{_auto}";
 
         }
         if (_musicEnd == false && AutoMode.Instance._autoMode == false)
         {
-            //_text.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
+            _uiText.text = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
             _resultText = $"PURE {_pure}\nFAR {_far}\nLOST {_lost}\n";
         }
     }

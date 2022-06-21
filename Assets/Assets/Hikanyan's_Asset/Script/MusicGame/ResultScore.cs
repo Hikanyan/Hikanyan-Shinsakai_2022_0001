@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TestScript : MonoBehaviour
+public class ResultScore : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _testText;
     void Start()
