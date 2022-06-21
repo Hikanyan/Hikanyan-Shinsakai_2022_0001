@@ -33,7 +33,7 @@ public class Judge : MonoBehaviour
              * 判定を取らないようにするため
              */
             {
-                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0] ));
+                Judgment(Mathf.Abs(Timer.instance.RealTime - _notesManager._notesTime[0] ));
                 /*
                  * 本来のノーツを叩く場所と実際に叩いた場所がどれくらいズレているかを求める
                  * その絶対値をJudgment関数に送る
@@ -46,7 +46,7 @@ public class Judge : MonoBehaviour
             _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 1)
             {
-                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
+                Judgment(Mathf.Abs(Timer.instance.RealTime - _notesManager._notesTime[0]));
 
             }
             Debug.Log($"Fキーが押された{_time}");
@@ -56,7 +56,7 @@ public class Judge : MonoBehaviour
             _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 2)
             {
-                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
+                Judgment(Mathf.Abs(Timer.instance.RealTime - _notesManager._notesTime[0]));
 
             }
             Debug.Log($"Jキーが押された{_time}");
@@ -66,7 +66,7 @@ public class Judge : MonoBehaviour
             _audioSource.PlayOneShot(_clip);
             if (_notesManager._notesTime.Count > 0 && _notesManager._laneNum[0] == 3)
             {
-                Judgment(GetABS(Timer.instance.RealTime - _notesManager._notesTime[0]));
+                Judgment(Mathf.Abs(Timer.instance.RealTime - _notesManager._notesTime[0]));
 
             }
             Debug.Log($"Kキーが押された{_time}");
@@ -123,18 +123,19 @@ public class Judge : MonoBehaviour
 
     }
 
-    float GetABS(float num)//因数の絶対値を返す関数
-                           //ABSは絶対値 (absolute value) を返す関数という意味
-    {
-        if (num >= 0)//もし、numが0より大きかったらnumを返す（0以上）
-        {
-            return num;
-        }
-        else        //そうじゃなかったら、-numを返す（0以下）
-        {
-            return -num;
-        }
-    }
+    //float GetABS(float num)//因数の絶対値を返す関数
+    //                       //ABSは絶対値 (absolute value) を返す関数という意味
+    //                       //Mathf.Abs(num);というもので一行でできるらしい
+    //{
+    //    if (num >= 0)//もし、numが0より大きかったらnumを返す（0以上）
+    //    {
+    //        return num;
+    //    }
+    //    else        //そうじゃなかったら、-numを返す（0以下）
+    //    {
+    //        return -num;
+    //    }
+    //}
 
     void DeleteData()//叩いたノーツを非表示もしくは削除する関数
     {

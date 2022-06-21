@@ -52,7 +52,7 @@ public class NotesManager : MonoBehaviour
     /// <summary>ロングノーツのオブジェクト</summary>
     [SerializeField] private GameObject _noteLongObject;//ロングノーツのプレハブを入れる
     /// <summary>ノーツのスピード</summary>
-    [SerializeField] private float _notesSeed;//ノーツのスピード
+    [HideInInspector] public static float _notesSpeed = 5.0f;//ノーツのスピード
     /// <summary>ノーツが流れてくる猶予 </summary>
     public float _notesOffset;//ノーツが流れてくる遅延時間(未実装)
 
@@ -93,7 +93,7 @@ public class NotesManager : MonoBehaviour
             _laneNum.Add(inputJson.notes[i].block);  //LaneNumリストに追加
             _noteType.Add(inputJson.notes[i].type);  // NoteTypeリストに追加
 
-            float z = _notesTime[i] * _notesSeed;     //ノーツの生成される位置
+            float z = _notesTime[i] * _notesSpeed;     //ノーツの生成される位置
             
             _notesObject.Add(Instantiate(_noteObject, new Vector3(inputJson.notes[i].block - 1.5f, 0.55f,z), Quaternion.identity));//ノーツ生成・インスタンス化
         }

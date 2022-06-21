@@ -5,7 +5,7 @@ using System;
 
 public class Notes : MonoBehaviour
 {
-    public float _notesSpeed = 1.00f;
+    [HideInInspector]public static float _notesSpeed = 5.0f;
     private void Start()
     {
         GetComponent<Renderer>().enabled = false;
@@ -16,15 +16,15 @@ public class Notes : MonoBehaviour
         transform.position -= new Vector3(0, 0, transform.forward.z * Time.deltaTime * _notesSpeed);
         if (this.transform.position.z < -5.0f)
         {
-            
+
             this.gameObject.SetActive(false);
         }
         if (this.transform.position.z < 18.0f)
         {
-            
+
             GetComponent<Renderer>().enabled = true;
         }
-        
+
     }
 
     public void NotesEnabled()
