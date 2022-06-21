@@ -61,7 +61,7 @@ public class ScoreText : MonoBehaviour
     public void ResultScore()
     {
 
-        _maxScore -= ((_far*10 / 2) + _lost*10);
+        //_maxScore -= ((_far*10 / 2) + _lost*10);
         _resultScoreUiText.text = $"{_maxScore}";
         _resultScoreJudgeText = $"{_maxScore}";
         if (_maxScore == 10000000)
@@ -107,4 +107,44 @@ public class ScoreText : MonoBehaviour
 /*
  * 理想           500                 500                     20001
  * （10000000+全体のノーツの総数）/全体のノーツの総数　＝　一個当たりのスコアの点数
+ * if (_maxScore == 10000000)
+        {
+            _resultRankUiText.text = "PM";
+            _resultRankJudgeText = "PM";
+        }
+        else if (_maxScore >= 9900000)
+        {
+            _resultRankUiText.text = "EX";
+            _resultRankJudgeText = "EX";
+        }
+        else if (_maxScore >= 9800000)
+        {
+            _resultRankUiText.text = "AA";
+            _resultRankJudgeText = "AA";
+        }
+        else if (_maxScore >= 9500000)
+        {
+            _resultRankUiText.text = "A";
+            _resultRankJudgeText = "A";
+        }
+        else if (_maxScore >= 9200000)
+        {
+            _resultRankUiText.text = "B";
+            _resultRankJudgeText = "B";
+        }
+        else if (_maxScore >= 8900000)
+        {
+            _resultRankUiText.text = "C";
+            _resultRankJudgeText = "C";
+        }
+        else if (_maxScore >= 8600000)
+        {
+            _resultRankUiText.text = "C";
+            _resultRankJudgeText = "C";
+        }
+        else
+        {
+            _resultRankUiText.text = "D";
+            _resultRankJudgeText = "D";
+        }
  */

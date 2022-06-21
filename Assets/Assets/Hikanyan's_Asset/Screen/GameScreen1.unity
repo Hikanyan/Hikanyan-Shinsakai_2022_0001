@@ -2110,13 +2110,17 @@ MonoBehaviour:
   _judgeUiText: {fileID: 0}
   _resultRankUiText: {fileID: 0}
   _resultScoreUiText: {fileID: 0}
+  _noteNum: 0
   _pure: 0
   _far: 0
   _lost: 0
   _auto: 0
   _musicEnd: 0
   _resultJudgeText: 
+  _resultRankJudgeText: 
   _maxScore: 10000000
+  _singleScore: 0
+  _resultScoreJudgeText: 
 --- !u!1 &1851213684
 GameObject:
   m_ObjectHideFlags: 0
