@@ -110,8 +110,8 @@ public class NotesManager : MonoBehaviour
  * 
  * 
  * https://qiita.com/irigoma77/items/ee15b3e748596aa6d086 
- * https://www.youtube.com/watch?v=WWeyn4TI0lI&t=327s
- * https://www.youtube.com/watch?v=TnKnwLIiY_8
+ * 
+ * 
  * 
  * 
  * 
